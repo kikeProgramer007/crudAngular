@@ -1,5 +1,7 @@
 # CrudAngular
 
+![demo_img](https://user-images.githubusercontent.com/86984317/197893576-b7163b1d-c1e3-4ee8-b194-4a2160236319.PNG)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 ## Development server
