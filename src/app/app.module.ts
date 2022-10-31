@@ -8,6 +8,7 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { CrudAngularComponent } from './components/crud-angular/crud-angular.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { CrudAngularComponent } from './components/crud-angular/crud-angular.com
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule, //añadir esto para formulario
-    BrowserAnimationsModule, //importamos el modulo de animacion
-    ToastrModule.forRoot()  //importar libreria toastr
+    ReactiveFormsModule,      //añadir esto para formulario
+    BrowserAnimationsModule,  //importamos el modulo de animacion
+    ToastrModule.forRoot(),   //importar libreria toastr
+    HttpClientModule          //importar para usar http
   ],
   providers: [],
   bootstrap: [AppComponent]

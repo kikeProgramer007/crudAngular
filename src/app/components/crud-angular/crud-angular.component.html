@@ -12,9 +12,9 @@
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="titulo">Agregar tarjeta de credito</h3>
+                    <h3 class="titulo">{{ accion | uppercase }} tarjeta de credito</h3>
 
-                    <form [formGroup]="form" (ngSubmit)="agregarTarjeta()">
+                    <form [formGroup]="form" (ngSubmit)="guardarTarjeta()">
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text">
                                 <i class="fa-solid fa-user" 
@@ -84,12 +84,12 @@
                         </thead>
                         <tbody>
                             
-                            <tr *ngFor="let tarjeta of listTarjeta; let i = index"><!-- capturando pocision en i al hacer clisk -->
+                            <tr *ngFor="let tarjeta of listTarjeta;"><!--  let i = index capturando pocision en i al hacer clisk -->
                                 <td>{{tarjeta.titular}}</td>
                                 <td>{{tarjeta.numeroTarjeta}}</td>
                                 <td>{{tarjeta.fechaExpiracion}}</td>
-                                <td><i class="fa-solid fa-pen-to-square text-info"></i></td>
-                                <td><i (click)="eliminarTarjeta(i)" class="fa-solid fa-trash-can text-danger"></i></td>
+                                <td><i (click)="editarTarjeta(tarjeta)" class="fa-solid fa-pen-to-square text-info"></i></td>
+                                <td><i (click)="eliminarTarjeta(tarjeta.id)" class="fa-solid fa-trash-can text-danger"></i></td>
                             </tr>
                         </tbody>
                     </table>
